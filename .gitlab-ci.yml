@@ -1,0 +1,10 @@
+docker:
+    variables:
+        REGISTRY: gitlab-registry.mito.hu/
+        TAG: $CI_BUILD_REF_NAME # branch or tag name
+        DEFAULT_TAG: "master" # set master as latest
+        BUILD_DIR: $CI_PROJECT_DIR
+    script:
+        - echo "docker-builder should not execute this"
+    tags:
+        - docker-builder
